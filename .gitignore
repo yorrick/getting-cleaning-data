@@ -11,3 +11,8 @@
 # produced vignettes
 vignettes/*.html
 vignettes/*.pdf
+
+UCI HAR Dataset
+
+.DS_Store
+
