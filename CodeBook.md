@@ -1,38 +1,39 @@
-# Steps
+Feature Selection 
+=================
 
-This documentation contains the steps to reproduce to generate the tidy dataset.
+The following features are available in the tidy dataset
 
-## Download & unzip raw data
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
 
-Data is store [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+The set of variables that were estimated from these signals are: 
 
-To download and extract it, please run (on *nix)
-
-```
-wget https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-unzip getdata%2Fprojectfiles%2FUCI HAR Dataset.zip
-rm getdata%2Fprojectfiles%2FUCI HAR Dataset.zip
-```
-
-## Generate the dataset
-
-Source the script named ```run_analysis.R```, then run
-
-```
-generate_tidy_dataset()
-```
-
-By default, a file named ```tidy_dataset.txt``` of about 10Mb will be generated
-in the current directory.
-
-## Details
-
-The script works like this:
-
-1. Data from testing and training dataset is loaded as a data frame. 
-For each set we load labels and data text files.
-2. Mean and standard deviation features are then select in the data.
-3. Descriptive names are then assigned to activities, and to columns.
-4. Dataset is then written in a text file.
+mean(): Mean value
+std(): Standard deviation
 
 
+Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
+
+gravityMean
+tBodyAccMean
+tBodyAccJerkMean
+tBodyGyroMean
+tBodyGyroJerkMean
+
+
+The complete list of variables of each feature vector is available in 'features.txt'
