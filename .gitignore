@@ -15,4 +15,5 @@ vignettes/*.pdf
 UCI HAR Dataset
 
 .DS_Store
+tidy_dataset.txt
 
